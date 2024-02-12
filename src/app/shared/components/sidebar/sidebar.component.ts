@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  closeMenu() {
+    let menu = document.querySelector('.side-bar');
+    let body = document.body;
+    if (menu)
+      menu.classList.remove('active');
+    if (body) 
+      body.classList.remove('active');
+  }
 }

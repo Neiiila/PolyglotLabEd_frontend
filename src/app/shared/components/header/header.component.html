@@ -1,8 +1,32 @@
-<header>
-    <div class="logo">LOGO </div>
-    <div>
-        <a routerLink="/">Home</a> <!-- routerLink is a tag helpers -->
+
+<header class="header">
+    
+    <section class="flex">
+        <a routerLink="/" class="logo">LOGO </a>
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search..." required maxlength="100"/>
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+        
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars" (click)="activateMenu()"></div>
+            <div id="search-btn" class="fas fa-search" (click)="activateSearch()"></div>
+            <div id="user-btn" class="fas fa-user" (click)="activateProfile()"></div>
+            <div id="toggle-btn" class="fas fa-sun" (click)="toggleTheme()"></div>
+        </div>
+        
+        <div class="profile" >
+            <img src="assets/img/pic-1.jpg" class="image" alt="">
+            <h3 class="name">shaikh anas</h3>
+            <p class="role">studen</p>
+            <a href="profile.html" class="btn" >view profile</a>
+            <div class="flex-btn">
+               <a routerLink="/login" class="option-btn">login</a>
+               <a routerLink="/" class="option-btn">register</a>
+            </div>
+         </div>
+        <!--<a routerLink="/">Home</a>  routerLink is a tag helpers
         <a routerLink="/courses">Courses</a>
-        <a routerLink="/login">Login</a>
-    </div>
+        <a routerLink="/login">Login</a> -->
+    </section>
 </header>
