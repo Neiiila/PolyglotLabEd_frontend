@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  isAuthentificated = localStorage.getItem('isAuthentificated') === 'true' ? true : false;
+
   closeMenu() {
     let menu = document.querySelector('.side-bar');
     let body = document.body;

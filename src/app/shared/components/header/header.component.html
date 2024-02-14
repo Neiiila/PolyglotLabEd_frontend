@@ -16,17 +16,25 @@
         </div>
         
         <div class="profile" >
-            <img src="assets/img/pic-1.jpg" class="image" alt="">
-            <h3 class="name">shaikh anas</h3>
-            <p class="role">studen</p>
-            <a href="profile.html" class="btn" >view profile</a>
-            <div class="flex-btn">
-               <a routerLink="/login" class="option-btn">login</a>
-               <a routerLink="/" class="option-btn">register</a>
+            <div *ngIf="isAuthentificated; else registerLogin ">
+                <img src="assets/img/pic-1.jpg" class="image" alt="">
+                <h3 class="name">shaikh anas</h3>
+                <p class="role">studen</p>
+                <a routerLink="/profile-details" class="btn" >view profile</a>
+                <a href="profile.html" class="btn" >logout</a>
+    
+                <!-- <div class="flex-btn">
+                <a routerLink="/login" class="option-btn">login</a>
+                <a routerLink="/" class="option-btn">register</a>
+                </div> -->
             </div>
          </div>
-        <!--<a routerLink="/">Home</a>  routerLink is a tag helpers
-        <a routerLink="/courses">Courses</a>
-        <a routerLink="/login">Login</a> -->
+         <ng-template #registerLogin class="profile">
+            <div class="flex-btn">
+                <a routerLink="/login" class="option-btn">login</a>
+                <a routerLink="/register" class="option-btn">register</a>
+                </div>
+        </ng-template>
+        
     </section>
 </header>

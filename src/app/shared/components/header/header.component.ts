@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  isAuthentificated = localStorage.getItem('isAuthentificated') === 'true' ? true : false;
+ 
   ngOnInit() {
       window.onscroll = () => { 
         let profile = document.querySelector('.header .flex .profile');

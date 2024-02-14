@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  isAuthentificated = localStorage.getItem('isAuthentificated') === 'true' ? true : false;
+  ngOnInit() {
+      console.log('first')
+  }
 }

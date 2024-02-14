@@ -1,4 +1,4 @@
-<div class="side-bar">
+<div class="side-bar" *ngIf="isAuthentificated">
 
     <div id="close-btn" (click)="closeMenu()">
        <i class="fas fa-times"></i>
@@ -13,8 +13,8 @@
  
     <nav class="navbar" >
        <a routerLink="/"><i class="fas fa-home"></i><span>home</span></a>
-       <a routerLink="/"><i class="fas fa-question"></i><span>about</span></a>
-       <a routerLink="/"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+       <a routerLink="/about"><i class="fas fa-question"></i><span>about</span></a>
+       <a routerLink="/courses"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
        <a routerLink="/"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
        <a routerLink="/"><i class="fas fa-headset"></i><span>contact us</span></a>
     </nav>
